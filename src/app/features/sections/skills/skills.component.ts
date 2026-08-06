@@ -18,7 +18,7 @@ export class SkillsComponent {
     this.skills = this.skillsService.getSkills();
   }
 
-  // Métodos para agrupar categoría
+  // Métodos para agrupar categorías
   get frontendSkills(): Skill[] {
     return this.skills.filter((s) => s.category === 'frontend');
   }
