@@ -1,0 +1,41 @@
+<div class="container">
+    <h2 class="section-title">Habilidades y tecnologías</h2>
+    <div class="skills-container">
+        <div class="skill-group">
+            <h4>FRONTEND</h4>
+            <div class="skill-tags">
+                @for (skill of frontendSkills; track skill.id) {
+                <div class="skill-item">
+                    <img src="{{ skill.imageUrl }}" alt="{{ skill.name }}" class="skill-icon">
+                    <span class="tag">{{ skill.name }}</span>
+                </div>
+                }
+            </div>
+        </div>
+        
+        <div class="skill-group">
+            <h4>BACKEND & DB</h4>
+            <div class="skill-tags">
+                @for (skill of backendAndDbSkills; track skill.id) {
+                <div class="skill-item">
+                    <img src="{{ skill.imageUrl }}" alt="{{ skill.name }}" class="skill-icon">
+                    <span class="tag">{{ skill.name }}</span>
+                </div>
+                }
+            </div>
+
+        </div>
+
+        <div class="skill-group">
+            <h4>GESTIÓN & HERRAMIENTAS</h4>
+            <div class="skill-tags">
+                @for (skill of toolsAndManagementSkills; track skill.id) {
+                <div class="skill-item">
+                    <img src="{{ skill.imageUrl }}" alt="{{ skill.name }}" class="skill-icon">
+                    <span class="tag">{{ skill.name }}</span>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

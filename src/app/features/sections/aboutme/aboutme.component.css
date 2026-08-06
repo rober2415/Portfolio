@@ -1,0 +1,10 @@
+.about-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.about-image img {
+  width: 200px;
+  height: 220px;
+}
