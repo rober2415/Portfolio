@@ -5,6 +5,7 @@ on:
     branches:
       - master
       - main
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -12,7 +13,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: 'pages'
+  group: "pages"
   cancel-in-progress: true
 
 jobs:
@@ -36,11 +37,13 @@ jobs:
         run: npm ci
 
       - name: Build Angular
-        run: npx ng build --configuration production
+        # Ajustado a /Portfolio/ para coincidir exactamente con el nombre de tu repositorio
+        run: npx ng build --configuration production --base-href /Portfolio/
 
       - name: Upload artifact for deployment
         uses: actions/upload-pages-artifact@v3
         with:
+          # Ruta requerida por el builder de Angular 17+ (portfolio en minúscula según tu angular.json)
           path: dist/portfolio/browser
 
       - name: Deploy to GitHub Pages
