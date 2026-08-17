@@ -1,0 +1,27 @@
+.about-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.about-image img {
+  width: 200px;
+  height: 220px;
+  object-fit: cover;
+  
+  border-radius: 8px;
+  border: 4px solid var(--accent);
+
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .about-image {
+    order: -1;
+  }
+}

@@ -1,0 +1,17 @@
+<div class="container">
+    <h2 class="section-title">Formación académica</h2>
+    <div class="timeline">
+        @for (education of educations; track education.id) {
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <div>
+                    <div class="timeline-role">{{ education.name }}</div>
+                    <div class="timeline-company">{{ education.school }}</div>
+                </div>
+                <div class="timeline-date">{{ education.startDate | date:'yyyy' }} - {{ education.endDate ?
+                    (education.endDate | date:'yyyy') : 'Actualidad' }}</div>
+            </div>
+        </div>
+        }
+    </div>
+</div>

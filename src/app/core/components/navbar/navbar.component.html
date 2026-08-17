@@ -1,0 +1,43 @@
+<nav>
+    <div class="container nav-container">
+        <a href="#" class="logo">RC</a>
+        <ul class="nav-links">
+            <li><a href="#aboutme">Sobre mí</a></li>
+            <li><a href="#experience">Experiencia</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="mailto:rober2415@hotmail.com">Contacto</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-uppercase d-flex align-items-center" href="#"
+                    id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i [ngClass]="{
+                            'bi-circle-half': themeService.currentTheme === 'system',
+                            'bi-moon-fill': themeService.currentTheme === 'dark',
+                            'bi-brightness-high-fill': themeService.currentTheme === 'light'
+                            }">
+                    </i>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-end text-uppercase border-0 shadow rounded-0">
+                    <li>
+                        <button class="dropdown-item d-flex align-items-center gap-2"
+                            [class.active]="themeService.currentTheme === 'light'" (click)="setTheme('light')">
+                            <i class="bi bi-brightness-high-fill"></i> Light
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item d-flex align-items-center gap-2"
+                            [class.active]="themeService.currentTheme === 'dark'" (click)="setTheme('dark')">
+                            <i class="bi bi-moon-fill"></i> Dark
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item d-flex align-items-center gap-2"
+                            [class.active]="themeService.currentTheme === 'system'" (click)="setTheme('system')">
+                            <i class="bi bi-circle-half"></i> System
+                        </button>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,69 @@
+/* Hero Section */
+.hero {
+  padding: 160px 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.badge {
+  background-color: #38bdf81a;
+  color: var(--accent);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-family: var(--font-code);
+  margin-bottom: 20px;
+  border: 1px solid #38bdf833;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  margin-bottom: 30px;
+  max-width: 700px;
+}
+
+.cta-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: var(--bg-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  color: var(--bg-color);
+}
+
+.btn-secondary {
+  background-color: var(--bg-color);
+  border: 1px solid #334155;
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--card-bg);
+  border-color: var(--text-secondary);
+}
