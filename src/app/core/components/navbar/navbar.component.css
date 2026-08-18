@@ -44,9 +44,13 @@
   color: var(--accent);
 }
 
-@media (max-width: 478px) {
+@media (max-width: 420px) {
   .logo {
     display: none;
+  }
+
+  .nav-container {
+    justify-content: center;
   }
 
   .nav-links {
