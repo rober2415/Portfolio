@@ -37,14 +37,14 @@
 .nav-links a {
   color: var(--text-secondary);
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 550;
 }
 
 .nav-links a:hover {
   color: var(--accent);
 }
 
-@media (max-width: 420px) {
+@media (max-width: 440px) {
   .logo {
     display: none;
   }
@@ -56,4 +56,8 @@
   .nav-links {
     gap: 0.7rem;
   }
+
+  .nav-links a {
+  font-size: 0.80rem;
+}
 }
