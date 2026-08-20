@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import {
   Education,
   EducationService,
-} from '../../../core/services/education.service';
+} from '../../core/services/education.service';
 
 @Component({
   selector: 'app-education',

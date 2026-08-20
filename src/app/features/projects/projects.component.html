@@ -1,13 +1,13 @@
 <div class="container">
     <h2 class="section-title">Proyectos destacados</h2>
     <div class="projects-grid">
-
+        @for( project of projects; track project.id){
         <div class="project-card">
             <div class="project-image">
-                <img src="assets/img/surl-preview.png" class="project-image" alt="Previsualización de SURL">
+                <img src="{{project.image}}" class="project-image" alt="Previsualización de SURL">
             </div>
             <div>
-                <div class="project-title">SURL - URL Shortener</div>
+                <div class="project-title">{{project.title}}</div>
                 <div class="project-desc">
                     <p>Desarrollé la aplicación para resolver el problema de la gestión e interacción
                         con enlaces largos, buscando ofrecer una herramienta rápida, ligera y escalable.
@@ -17,17 +17,17 @@
                         con protección de rutas y autenticación mediante Laravel Sanctum.</p>
                 </div>
                 <div class="tags" style="margin-bottom: 15px;">
+                    @for(tag of project.tags; track $index){
                     <span class="tag">
-                        <img src="assets/img/angular.svg" alt="Angular" class="tag-icon">Angular</span>
-                    <span class="tag">
-                        <img src="assets/img/laravel.svg" alt="Laravel" class="tag-icon">Laravel</span>
-                    <span class="tag">
-                        <img src="assets/img/MySQL_dark.svg" alt="MySQL" class="tag-icon">MySQL</span>
+                        <img src="{{tag.icon}}" alt="{{tag.name}}" class="tag-icon">{{tag.name}}</span>
+                    }
                 </div>
-                <a href="https://github.com/rober2415/short-url" target="_blank">Ver proyecto en GitHub &rarr;</a>
+                <div class="project-url">
+                    <a href="{{project.code}}" target="_blank">Code &rarr;</a>
+                    <a href="{{project.preview}}" target="_blank">Preview &rarr;</a>
+                </div>
             </div>
-
         </div>
-
+        }
     </div>
 </div>

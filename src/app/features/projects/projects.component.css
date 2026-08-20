@@ -71,6 +71,11 @@
   margin-right: 5px;
 }
 
+.project-url {
+ display: flex;
+ gap: 0 2rem;
+}
+
 @media (max-width: 1024px) {
   .project-card {
     flex-direction: column;

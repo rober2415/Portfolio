@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import {
   ExperienceService,
   Experience,
-} from '../../../core/services/experience.service';
+} from '../../core/services/experience.service';
 
 @Component({
   selector: 'app-experience',
